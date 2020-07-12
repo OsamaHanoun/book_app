@@ -20,6 +20,12 @@ app.get('/hello',(req,res)=>{
 app.get('/searches/new',(req,res)=>{
     res.render('pages/searches/new');
 });
+app.get('/form',(req,res)=>{
+    console.log(req);
+    res.send(req.query);
+});
+
+    // res.redirect('/welcome.html');
 
 app.get('*',(req,res)=>{
     res.status(404).send(`This route doesn't exist`);

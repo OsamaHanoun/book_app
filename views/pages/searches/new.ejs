@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="modules.css">
 </head>
 <body>
-    <form action="" method="GET">
+    <form action="/form" method="GET">
         <label for="">
-            <input type="text" value="searchText">
+            <input type="text" name="searchText" placeholder="Enter a Title or Author" >
         </label>
-        <select name="" id="">
-            <option value="title">Title</option>
-            <option value="authur">Authur</option>
-        </select>
+        <label for="title">Title</label>
+        <input type="radio" name="title" id="title" value="title">
+        <label for="author">Author</label>
+        <input type="radio" name="author" id="author" value="author">
+        <button type="submit">Search the Google Books API</button>
     </form>
 
     
