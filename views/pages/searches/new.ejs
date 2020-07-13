@@ -6,18 +6,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="modules.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
 </head>
 <body>
-    <form action="/form" method="GET">
+    <form action="/searches" method="GET">
         <label for="">
             <input type="text" name="searchText" placeholder="Enter a Title or Author" >
         </label>
         <label for="title">Title</label>
-        <input type="radio" name="title" id="title" value="title">
+        <input type="radio" name="searchBy" id="title" value="title">
         <label for="author">Author</label>
-        <input type="radio" name="author" id="author" value="author">
+        <input type="radio" name="searchBy" id="author" value="author">
         <button type="submit">Search the Google Books API</button>
     </form>
 
