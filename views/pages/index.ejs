@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,24 @@
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="modules.css">
 </head>
-<body>
-    <p>HELLO</p>
-    
 
-    
+<body>
+    <button ><a href="/searches/new">searches</a></button>
+    <p>Total number of books : <%=books.length %></p>
+    <% books.forEach(book =>{ %>
+    <div>
+        <img src="<%=book.img_url%>" alt="">
+        <h3>Title: <%= book.title%></h3>
+
+        <p>Author: <%= book.author%></p>
+
+        <button><a href="/books/<%= book.id%>">View Full Details</a></button>
+
+    </div>
+    <% }); %>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </body>
+
 </html>
