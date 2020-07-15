@@ -15,21 +15,36 @@
 
     <% books.forEach(val => { %>
     <div>
-        <ul>
-            <img src="<%= val.img_url %>" alt="">
-            <li>
-                <%= val.title %>
-            </li>
-            <li>
-                <%= val.author %>
-            </li>
-            <li>
-                <%= val.description %>
-            </li>
-        </ul>
+        <form action="/books" method="POST">
+            <fieldset>
+                <img src="<%= val.img_url %>" alt="">
+                <input type='hidden' name='img_url' value='<%= val.img_url %>'>
+                <label>
+                    <p>Title</p>
+                    <input type="text" name='title'value="<%=val.title %>" placeholder=" <%=val.title %>">
+                </label>
+                <label>
+                    <p>author</p>
+                    <input type="text" name='author' value="<%=val.author %>" placeholder=" <%=val.author %>">
+                </label>
+                <label >
+                    <p>description</p>
+                    <textarea type="text" name='description' cols="40" rows="20"><%= val.description %></textarea>
+                </label>
+                <label>
+                    <p>ISBN</p>
+                    <input type="text" name='isbn' value="<%= val.isbn %>"placeholder="<%= val.isbn %>">
+                </label>
+                <label>
+                    <p>Bookshelf</p>
+                    <input type="text" name='shelf' value="">
+                </label>
+                <button type="submit">Add Book</button>
+            </fieldset>
+        </form>
     </div>
     <% }) %>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </body>
 
